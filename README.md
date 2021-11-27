@@ -1,4 +1,4 @@
-**Create A dynamic marker with mapbox and php mysql**
+**Created a dynamic marker with mapbox and php mysql**
 
 ### db.php establishes the connection to your database
  ## footer.php has the footer file, this is not imported in the user-map.php
