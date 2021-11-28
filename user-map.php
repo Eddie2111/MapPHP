@@ -46,13 +46,7 @@ include 'locations_model.php';
 
     <div class="container">
         <form action="" id="signupForm">
-            <label for="lat">lat</label>
-            <input type="text" id="lat" name="lat" placeholder="Your lat..">
 
-            <label for="lng">lng</label>
-            <input type="text" id="lng" name="lng" placeholder="Your lng..">
-
-            <input type="submit" value="Submit" >
         </form>
     </div>
 
@@ -83,7 +77,7 @@ include 'locations_model.php';
             center: user_location,
             zoom: 10
         });
-        //  geocoder here
+        //  geocoder here  //
         var geocoder = new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
         });
@@ -146,6 +140,11 @@ include 'locations_model.php';
             console.log('lng: ' + lngLat.lng + '<br />lat: ' + lngLat.lat);
         }
 
+
+///from here you will have to send data///
+
+
+
         $('#signupForm').submit(function(event){
             event.preventDefault();
             var lat = $('#lat').val();
@@ -162,13 +161,12 @@ include 'locations_model.php';
             });
         });
 
+//////////////////////////////////////////////////
+
         document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
     </script>
 
-
-
 <?php
-include_once 'footer.php';
-
+include_once footer.php;
 ?>
